@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { filters } from "../../data/data";
-import Category from "./Category";
 import Filter from "./Filter";
 
 const Title = styled.div`
@@ -24,6 +23,7 @@ const List = styled.ul`
   margin: 0px;
   padding: 0px;
 `;
+
 const Filters = () => {
   return (
     <div>

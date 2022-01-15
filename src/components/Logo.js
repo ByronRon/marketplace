@@ -6,9 +6,9 @@ const Brand = styled("h1")(({ theme }) => ({
   fontSize: "26px",
 }));
 
-const Logo = ({ children }) => {
+const Logo = () => {
   return (
-    <Brand>{children}</Brand>
+    <Brand>MarketTemplate</Brand>
     // <img
     //   alt="Logo"
     //   src="/static/logo.svg"

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
+import { styled } from "@mui/material/styles";
 import PropTypes from "prop-types";
 import { AppBar, Badge, Box, Hidden, IconButton, Toolbar } from "@mui/material";
 import {
@@ -9,6 +10,9 @@ import {
 } from "@mui/icons-material";
 import Logo from "./Logo";
 
+const Link = styled(RouterLink)(({ theme }) => ({
+  color: theme.palette.primary.contrastText,
+}));
 const DashboardNavbar = ({ onMobileNavOpen, ...rest }) => {
   const [notifications, setNotifications] = useState([]);
 
@@ -16,7 +20,7 @@ const DashboardNavbar = ({ onMobileNavOpen, ...rest }) => {
     <AppBar>
       <Toolbar>
         <RouterLink to="/">
-          <Logo>MarketTemplate</Logo>
+          <Logo />
         </RouterLink>
         <Box sx={{ flexGrow: 1 }} />
         <Hidden lgDown>
@@ -29,9 +33,11 @@ const DashboardNavbar = ({ onMobileNavOpen, ...rest }) => {
               <NotificationsOutlined />
             </Badge>
           </IconButton>
-          <IconButton color="inherit" size="large">
-            <InputOutlined />
-          </IconButton>
+          <Link to="/login">
+            <IconButton color="inherit" size="large">
+              <InputOutlined />
+            </IconButton>
+          </Link>
         </Hidden>
         <Hidden lgUp>
           <IconButton color="inherit" onClick={onMobileNavOpen} size="large">

@@ -4,7 +4,6 @@ import { categories } from "../../data/data";
 import Category from "./Category";
 
 const Title = styled.div`
-  /* //color: rgb(37, 56, 88); */
   font-weight: bold;
   line-height: 18px;
   text-transform: uppercase;

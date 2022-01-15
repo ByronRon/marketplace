@@ -1,7 +1,7 @@
 import { Link as RouterLink, useNavigate } from "react-router-dom";
-// import { Helmet } from "react-helmet";
-// import * as Yup from "yup";
-// import { Formik } from "formik";
+import { Helmet } from "react-helmet";
+import * as Yup from "yup";
+import { Formik } from "formik";
 import {
   Box,
   Button,
@@ -13,7 +13,7 @@ import {
 // import { firebaseLogin } from "src/utils/firebaseConfig";
 
 const Login = () => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   // const login = (credentials) => {
   //   firebaseLogin(credentials.email, credentials.password)
@@ -27,10 +27,14 @@ const Login = () => {
   //     });
   // };
 
+  const login = () => {
+    navigate("/app/search", { replace: true });
+  };
+
   return (
     <>
-      {/* <Helmet>
-        <title>Login | Car Master Check</title>
+      <Helmet>
+        <title>Login | MarketTemplate</title>
       </Helmet>
       <Box
         sx={{
@@ -131,7 +135,7 @@ const Login = () => {
             )}
           </Formik>
         </Container>
-      </Box> */}
+      </Box>
     </>
   );
 };

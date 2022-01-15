@@ -1,12 +1,11 @@
 import { SearchOutlined } from "@mui/icons-material";
-import { Box, Hidden, InputBase, TextField } from "@mui/material";
+import { Hidden, InputBase } from "@mui/material";
 import React from "react";
 import { styled } from "@mui/material/styles";
 
 const Container = styled("div")(({ theme }) => ({
   height: "370px",
   backgroundColor: theme.palette.primary.main,
-  //   color: white,
   display: "flex",
   justifyContent: "flex-start",
   alignItems: "center",

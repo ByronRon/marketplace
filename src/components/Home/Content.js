@@ -1,4 +1,4 @@
-import { Box, Grid, Paper } from "@mui/material";
+import { Box, Grid, Hidden } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 import Categories from "./Categories";
@@ -6,6 +6,7 @@ import Filters from "./Filters";
 import { newest, staffPicks, topSelling } from "../../data/data";
 import CardTemplate from "../CardTemplate";
 import CardTemplateResume from "../CardTemplateResume";
+import SearchResume from "../SearchResume";
 
 const Container = styled.div`
   height: auto;
@@ -67,25 +68,23 @@ const Text = styled.div`
   max-width: 850px;
 `;
 
-const Item = styled(Paper)(({ theme }) => ({
-  // ...theme.typography.body2,
-  // padding: theme.spacing(2),
-  // textAlign: "center",
-  // color: theme.palette.text.secondary,
-}));
-
 const Content = ({ theme }) => {
   return (
     <Container>
+      <Hidden lgUp>
+        <SearchResume></SearchResume>
+      </Hidden>
       <Wrapper>
-        <Left>
-          <Filters />
-          <Categories />
-        </Left>
+        <Hidden lgDown>
+          <Left>
+            <Filters />
+            <Categories />
+          </Left>
+        </Hidden>
         <Right>
           <MainTitle>Staff Picks</MainTitle>
           <Text>
-            Each quarterteam selects top apps to highlight. We think these apps
+            Each quarter team selects top apps to highlight. We think these apps
             are a great place to start if you're new to the Template
             Marketplace.
           </Text>

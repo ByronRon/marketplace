@@ -5,7 +5,6 @@ import { Outlet } from "react-router-dom";
 import DashboardFooter from "./DashboardFooter";
 
 import DashboardNavbar from "./DashboardNavbar";
-import DashboardSidebar from "./DashboardSidebar";
 
 const DashboardLayoutRoot = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.background.default,

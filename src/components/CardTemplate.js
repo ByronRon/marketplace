@@ -4,24 +4,18 @@ import {
   CardActions,
   CardContent,
   CardHeader,
-  CardMedia,
   Divider,
   IconButton,
   Typography,
 } from "@mui/material";
 import {
   MoreVertOutlined,
-  FavoriteOutlined,
   ShareOutlined,
-  StartOutlined,
-  StarOutlined,
-  StarOutlineOutlined,
-  StarHalfOutlined,
   StarRounded,
   StarHalfRounded,
 } from "@mui/icons-material";
 import React from "react";
-import { blue, red } from "@mui/material/colors";
+import { blue } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 
 const Tags = styled("div")({
@@ -49,12 +43,6 @@ const CardTemplate = ({ template }) => {
           title={template.title}
           subheader={template.downloads}
         />
-        {/* <CardMedia
-          component="img"
-          height="194"
-          image="/static/images/cards/paella.jpg"
-          alt="Paella dish"
-        /> */}
         <CardContent>
           <Typography variant="body2" color="text.secondary">
             {template.description}

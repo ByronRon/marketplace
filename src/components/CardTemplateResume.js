@@ -1,29 +1,7 @@
-import {
-  Avatar,
-  Card,
-  CardActions,
-  CardContent,
-  CardHeader,
-  CardMedia,
-  Divider,
-  IconButton,
-  Typography,
-} from "@mui/material";
-import {
-  MoreVertOutlined,
-  FavoriteOutlined,
-  ShareOutlined,
-  StartOutlined,
-  StarOutlined,
-  StarOutlineOutlined,
-  StarHalfOutlined,
-  StarOutlineRounded,
-  StarHalfRounded,
-  StarRateRounded,
-  StarRounded,
-} from "@mui/icons-material";
+import { Avatar, CardContent, CardHeader } from "@mui/material";
+import { StarHalfRounded, StarRounded } from "@mui/icons-material";
 import React from "react";
-import { blue, red } from "@mui/material/colors";
+import { blue } from "@mui/material/colors";
 import { styled } from "@mui/material/styles";
 
 const Tags = styled("div")({
@@ -46,24 +24,10 @@ const CardTemplateResume = ({ template }) => {
               R
             </Avatar>
           }
-          // action={
-          //   <IconButton aria-label="settings">
-          //     <MoreVertOutlined />
-          //   </IconButton>
-          // }
           title={template.title}
           subheader={template.category.toUpperCase()}
         />
-        {/* <CardMedia
-          component="img"
-          height="194"
-          image="/static/images/cards/paella.jpg"
-          alt="Paella dish"
-        /> */}
         <CardContent>
-          {/* <Typography variant="body2" color="text.secondary">
-            {template.description}
-          </Typography> */}
           <Tags>
             <h5>{template.tags}</h5>
           </Tags>
@@ -75,15 +39,6 @@ const CardTemplateResume = ({ template }) => {
             <StarHalfRounded style={{ fill: "#f4b400" }} />
           </Stars>
         </CardContent>
-        {/* <Divider />
-        <CardActions disableSpacing>
-          <IconButton aria-label="share">
-            <ShareOutlined />
-          </IconButton>
-          <Typography variant="body4" color="text.secondary">
-            {template.category.toUpperCase()}
-          </Typography>
-        </CardActions> */}
       </Item>
     </div>
   );

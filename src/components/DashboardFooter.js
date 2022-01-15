@@ -3,15 +3,10 @@ import { styled } from "@mui/material/styles";
 
 const FooterContainer = styled("div")(({ theme }) => ({
   backgroundColor: theme.palette.background.default,
-  //   display: "flex",
-  //   flex: "1 1 auto",
   overflow: "hidden",
 }));
 
 const FooterContent = styled("div")({
-  //   flex: "1 1 auto",
-  //   height: "100%",
-  //   overflow: "auto",
   height: "100%",
   padding: "0 20px",
   display: "flex",
@@ -29,7 +24,6 @@ const MainTitle = styled("h2")({
   color: "rgb(37, 56, 88)",
   fontWeight: "500",
   fontSize: "25px",
-  //   lineHeight: "44px",
   margin: "20px 10px",
 });
 

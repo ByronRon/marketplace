@@ -1,0 +1,12 @@
+Login
+Carro de compras
+boton de pagos
+vista previa o demo de la plantilla (imagen)
+busquedas
+filtros
+interfaz
+arte (colores, iconos imagenes)
+
+
+administracion => manual
+procesos para ingresar plantillas
